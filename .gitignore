@@ -1,0 +1,8 @@
+.env
+*.env
+pswrd.txt
+uploads/
+node_modules/
+.DS_Store
+Archive.zip
+*.zip

@@ -1,0 +1,200 @@
+<?php
+session_start();
+error_reporting(0);
+include('../travel/includes/config.php');
+
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>THALATTA | BOOKING</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/carousel.css" type="text/css" media="screen">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/superfish.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobilemenu.js"></script>
+    <script src="../travel/js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+
+  	<!--[if lt IE 8]>
+    		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+   	<![endif]-->
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>/* Default image styles */
+.logo-image {
+  width: 85%;
+  height: auto;
+  max-width: 100%; /* Ensure the image doesn't exceed its original size */
+}
+
+/* Media queries for different screen sizes affecting only logo.png */
+@media only screen and (min-width: 768px) {
+  .logo-image {
+    max-width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo-image {
+    max-width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+<?php include('travel/includes/header.php');?>
+
+    <!--==============================header=================================-->
+    <header class="page-3">
+      <div class="container">
+        <div class="navbar navbar_ clearfix">
+          <div class="navbar-inner">
+
+              <h1 class="brand"><a href="index.html">
+              <img src="../img/logo.png" alt="Logo" class="logo-image">
+
+
+</a><span>BOOK YOUR NEXT ADVENTURE WITH US</span></h1>
+              <div class="div-telephone"> <img src="img/tel-img.png" alt=""> <span>1
+                  800 123 1234</span> <span>1 800 123 1235</span> </div>
+            </div>
+          
+              <?php
+              $currentPage = 'booking'; // Define this variable according to the current page
+              include('../menu.php');
+              ?>  
+             <div class="nav-collapse nav-collapse_ collapse">   
+              
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="container">
+      <?php
+
+
+?>
+
+<h1>Package List</h1>
+
+<?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
+$query = $dbh->prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{	?>
+			<div class="rom-btm">
+				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+					<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
+					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
+					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
+					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
+				</div>
+				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
+					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
+					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+<?php }} ?>
+
+
+<div><a href="package-list.php" class="view">View More Packages</a></div>
+</div>
+			<div class="clearfix"></div>
+	</div>
+
+
+
+<!--- routes ---->
+<div class="routes">
+	<div class="container">
+		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
+			<div class="rou-left">
+				<a href="#"><i class="glyphicon glyphicon-list-alt"></i></a>
+			</div>
+			<div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
+				<h3>80000</h3>
+				<p>Enquiries</p>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="col-md-4 routes-left">
+			<div class="rou-left">
+				<a href="#"><i class="fa fa-user"></i></a>
+			</div>
+			<div class="rou-rgt">
+				<h3>1900</h3>
+				<p>Registered users</p>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
+			<div class="rou-left">
+				<a href="#"><i class="fa fa-ticket"></i></a>
+			</div>
+			<div class="rou-rgt">
+				<h3>7,00,00,000+</h3>
+				<p>Booking</p>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+    <aside>
+    </aside>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <article class="span6 fright">
+            <ul class="list-soc">
+              <li><a href="#" class="icon-1"></a><br>
+              </li>
+              <li><a href="#" class="icon-2"></a><br>
+              </li>
+              <li><a href="#" class="icon-3"></a><br>
+              </li>
+              <li><a href="#" class="icon-4"></a><br>
+              </li>
+            </ul>
+          </article>
+          <article class="span6 fleft"> <a href="index.html"><img src="img/logo-1.png"
+                alt=""></a><span class="txt-foot"> © 2024 | &nbsp;<a href="index-5.html">Privacy
+                Policy</a></span> </article>
+        </div>
+      </div>
+    </footer>
+    <!--- selectroom ---->
+<div class="selectroom">
+	<div class="container">	
+		  <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+</html>

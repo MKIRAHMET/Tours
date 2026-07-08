@@ -1,0 +1,318 @@
+/*-- top-header --*/
+.logo a {
+    color: #3F84B1;
+    letter-spacing: 1px;
+    font-size: 2em;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+.logo span {
+    color:#0044ff;
+}
+i.fa.fa-home {
+    font-size: 24px;
+}
+.top-header {
+    background-color: #3F84B1;
+    border-bottom: 0 none;
+	height: 36px;
+    line-height: 35px;
+}
+ul.tp-hd-lft{
+    float: left;
+}
+ul.tp-hd-lft li {
+    display: inline-block;
+}
+li.hm,li.prnt {
+    margin-right: 12px;
+}
+ul.tp-hd-lft a {
+    font-size: 13px;
+    font-weight: 600;
+	color:#fff;
+}
+ul.tp-hd-rgt{
+    float:right;
+}
+ul.tp-hd-rgt li {
+    display: inline-block;
+	font-size: 13px;
+    font-weight: 600;
+	color:#fff;
+}
+ul.tp-hd-rgt  a {
+    font-size: 13px;
+    font-weight: 600;
+	color:#fff;
+}
+li.ned,li.wrt,li.tol{
+    margin-right: 12px;
+}
+/*-- /top-header --*/
+/*-- header --*/
+.header {
+    background-color: #fff;
+    margin: 0;
+	padding: 10px 0 8px;
+}
+.logo a {
+    display: block;
+}
+.logo {
+    float: left;
+	 margin-right: 60px;
+}
+.bus {
+    float: left;
+	padding-top: 17px;
+}
+.bus a {
+    color: #1f8dd6;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .05em;
+	padding:0 15px;
+}
+.lock {
+    float: right;
+    margin-top: 7px;
+}
+.securetxt {
+    color: #1f8dd6;
+    line-height: 18px;
+    margin-top: 0px;
+	font-size: 14px;
+	font-weight:600;
+}
+.lock li {
+    display: inline-block;
+}
+i.fa.fa-lock {
+    color:#1f8dd6;
+    font-size: 2em;
+    padding-right: 10px;
+}
+/*-- /header --*/
+
+/*-- sign up --*/
+.single-bottom input[type="checkbox"] {
+    display: none;
+  }
+  .single-bottom input[type="checkbox"]+label {
+      position: relative;
+      padding-left: 31px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #A9A8A8;
+      font-weight:normal;
+  }
+  .single-bottom input[type="checkbox"]+label span:first-child {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      border: 2px solid #0026ff;
+      position: absolute;
+      left: 0;
+      top: 4px;
+  }
+  .single-bottom input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    background:url(../images/mark1.png)no-repeat;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    font-size: 10px;
+    width:16px;
+    height:16px;
+  }
+  .modal-info {
+      width: 100%;
+  }
+  /*-- //Sign up --*/
+  .modal-header {
+      border-bottom: 1px solid #fff !important;
+  }
+
+/*-- login --*/
+.login-right {
+    width: 51%;
+    margin: 0 auto; /* Center the element horizontally */
+}
+.login-right h3{
+    color:#0026ff;
+    font-weight: normal;
+    font-size: 17px;
+
+}
+.login-left {
+    float: left;
+    width: 42%;
+}
+.login-right input[type="text"] ,.login-right input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-weight: normal;
+    background: none;
+    border: 1px solid #E6E4E4;
+    color: #D2D1D1;
+    outline: none;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.login-right h4{
+	color:#48cfc1;
+	font-size:12px;
+	margin:20px 0;
+}
+.login-right h4 a{
+	color:#0026ff;
+	text-decoration:none;
+}
+.login-right h4 a:hover{
+	color:#A9A8A8;
+}
+.login-grids p a {
+	color:#0026ff;
+}
+.login-right input[type="submit"] {
+  background:#0026ff;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  width: 100%;
+  outline: none;
+  -webkit-appearance:none;
+  padding: 10px 15px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+ margin-top:20px;
+}
+.login-right input[type="submit"]:hover {
+	background:#3F84B1;
+}
+.login-grids p {
+    font-size: 12px;
+    margin-top: 25px;
+	color:#A9A8A8;
+}
+.login-grids p span{
+	color:#48cfc1;	
+}
+.login-left ul li{
+	list-style-type:none;
+	display:block;
+    margin: 22px 0;
+    font-size: 16px;
+}
+.login-left ul li a {
+    padding: 9px 12px;
+    display: block;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+.login-left ul li a:hover{
+	opacity:.7;
+}
+.login-left ul li a.fb{
+	background:#3b5998;
+}
+.login-left ul li a.goog{
+	background:#dc4e41;
+}
+.login-left ul li a.linkin{
+	background:#00a0dc;
+}
+.login-left ul li a.fb i{
+    background: url(travel/images/social.png) no-repeat -45px -1px;
+    width: 24px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.login-left ul li a.goog i{
+    background: url(travel/images/social.png) no-repeat -84px 0px;
+    width: 26px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.login-left ul li a.linkin i{
+    background: url(travel/images/social.png) no-repeat -3px 0px;
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+/*-- //login --*/
+
+.privacy h3 {
+    color:#0026ff;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.privacy {
+    padding: 5em 0;
+}
+.privacy p {
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #999;
+    margin: 1em 0;
+}
+.privacy h4 {
+    font-size: 1.3em;
+    color: #002df8;
+    font-weight: 400;
+    margin: 1em 0;
+}
+
+/* Default button styles */
+input[type="button"],
+input[type="submit"],
+li.parallelogram {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+/* Specific styles for buttons within .agent-left */
+.agent-left input[type="submit"] {
+    outline: none;
+    background: #002df8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px 18px;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Media query for smaller screens, such as mobile phones */
+@media (max-width: 767px) {
+    /* Adjust styles for buttons on smaller screens */
+    input[type="button"],
+    input[type="submit"],
+    li.parallelogram {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .agent-left input[type="submit"] {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+    }
+}
